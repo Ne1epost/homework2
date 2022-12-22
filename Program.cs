@@ -16,25 +16,33 @@
 
 // if (n3 > 99) Console.WriteLine(((n3 % 100)-(n3 % 10))/10);
 
-// // Задача найти 3 число, если 3 цифры нет вывод "Цифры нет"
-// Console.WriteLine("Введите число: ");
-// int n = Convert.ToInt32(Console.ReadLine());
 
-// if (n > 99 || n < 999) n = n % 10;
-// Console.WriteLine(n);
+//Найти 3ю цифру, если нет, вывести цифры нет
+int number = new Random().Next(1,10000000);
+Console.WriteLine(number);
+string str = number.ToString();
+if (str.Length < 3)
+{
+    Console.WriteLine("третьей цифры нет");
+}
+else
+{
+    int a = (int)Char.GetNumericValue(str[2]);
+    Console.WriteLine($"{a}");
+}
 
 
 
 
 // задача цифра = дате недели и проверяет является она выходном
-Console.WriteLine("Введите день ");
-int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите день ");
+// int n = Convert.ToInt32(Console.ReadLine());
 
-if (n == 6 || n == 7)
-{
-    Console.WriteLine($"Да, {n} является выходным");
-}
-else
-{
-    Console.WriteLine($"Нет, {n} не выходной");
-}
+// if (n == 6 || n == 7)
+// {
+//     Console.WriteLine($"Да, {n} является выходным");
+// }
+// else
+// {
+//     Console.WriteLine($"Нет, {n} не выходной");
+// }
